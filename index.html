@@ -33,9 +33,7 @@
             display: none;
         }
         .page.active {
-            display: flex; /* Menggunakan flex untuk alignment */
-            flex-direction: column;
-            justify-content: center; /* Menengahkan konten secara vertikal */
+            display: block; /* Kembali ke display block biasa */
             animation: fadeIn 0.6s ease-in-out;
         }
         @keyframes fadeIn {
@@ -57,21 +55,22 @@
         }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-[100dvh] p-4">
+<body class="flex items-center justify-center min-h-screen p-4">
     <div class="w-full max-w-5xl bg-[var(--container-bg)] shadow-2xl rounded-lg overflow-hidden border border-[var(--border-color)] mx-auto">
-        <main id="manual-content" class="p-4 sm:p-6 md:p-10">
+        <!-- Kontainer main dengan tinggi fleksibel -->
+        <main id="manual-content" class="p-6 sm:p-8 md:p-12">
             
             <!-- Halaman 1: Judul -->
-            <div id="page-1" class="page min-h-[65vh]">
+            <div id="page-1" class="page py-20">
                 <div class="text-center">
                     <img src="logoharits.png" alt="Logo Usamah Al Harits" class="w-48 sm:w-56 mb-6 mx-auto">
                     <h1 class="font-garamond text-4xl sm:text-5xl font-bold text-[var(--primary-blue)] tracking-wider">Usamah Al Harits</h1>
-                    <h2 class="font-garamond text-2xl sm:text-3xl text-[var(--text-muted)] italic">Penulis & Kreator</h2>
+                    <h2 class="font-garamond text-2xl sm:text-3xl text-[var(--text-muted)] italic">Penulis</h2>
                 </div>
             </div>
 
             <!-- Halaman 2: Daftar Isi -->
-            <div id="page-2" class="page min-h-[65vh]">
+            <div id="page-2" class="page py-8">
                 <div>
                     <h1 class="font-garamond text-3xl sm:text-4xl font-bold text-[var(--primary-blue)] border-b-2 border-[var(--border-color)] pb-3 mb-8">Daftar Isi</h1>
                     <ul class="space-y-5 text-lg">
@@ -86,7 +85,7 @@
             </div>
 
             <!-- Halaman 3: Filosofi Jenama -->
-            <div id="page-3" class="page min-h-[65vh]">
+            <div id="page-3" class="page py-8">
                 <div>
                     <h1 class="font-garamond text-3xl sm:text-4xl font-bold text-[var(--primary-blue)] border-b-2 border-[var(--border-color)] pb-3 mb-6">1. Filosofi Jenama</h1>
                     <div class="space-y-4 text-[var(--text-muted)] leading-relaxed text-base">
@@ -99,7 +98,7 @@
             </div>
 
             <!-- Halaman 4: Logo & Penggunaannya -->
-            <div id="page-4" class="page min-h-[65vh]">
+            <div id="page-4" class="page py-8">
                 <div>
                     <h1 class="font-garamond text-3xl sm:text-4xl font-bold text-[var(--primary-blue)] border-b-2 border-[var(--border-color)] pb-3 mb-6">2. Logo & Penggunaannya</h1>
                     <h2 class="font-garamond text-2xl mb-4 text-[var(--text-dark)]">Logo Utama</h2>
@@ -111,7 +110,7 @@
             </div>
 
             <!-- Halaman 5: Palet Warna -->
-            <div id="page-5" class="page min-h-[65vh]">
+            <div id="page-5" class="page py-8">
                 <div>
                     <h1 class="font-garamond text-3xl sm:text-4xl font-bold text-[var(--primary-blue)] border-b-2 border-[var(--border-color)] pb-3 mb-6">3. Palet Warna</h1>
                     <p class="text-[var(--text-muted)] mb-8">Palet warna ini dipilih untuk memberikan kesan profesional, tenang, dan terpercaya. Gunakan secara konsisten untuk membangun pengenalan visual.</p>
@@ -141,7 +140,7 @@
             </div>
 
             <!-- Halaman 6: Tipografi -->
-            <div id="page-6" class="page min-h-[65vh]">
+            <div id="page-6" class="page py-8">
                 <div>
                     <h1 class="font-garamond text-3xl sm:text-4xl font-bold text-[var(--primary-blue)] border-b-2 border-[var(--border-color)] pb-3 mb-6">4. Tipografi</h1>
                     <div class="mb-8">
@@ -162,7 +161,7 @@
             </div>
 
             <!-- Halaman 7: Aturan Visual -->
-            <div id="page-7" class="page min-h-[65vh]">
+            <div id="page-7" class="page py-8">
                 <div>
                     <h1 class="font-garamond text-3xl sm:text-4xl font-bold text-[var(--primary-blue)] border-b-2 border-[var(--border-color)] pb-3 mb-6">5. Aturan Visual</h1>
                     <div class="mb-10">
@@ -190,7 +189,7 @@
             </div>
 
             <!-- Halaman 8: Integritas Logo -->
-            <div id="page-8" class="page min-h-[65vh]">
+            <div id="page-8" class="page py-8">
                 <div>
                     <h1 class="font-garamond text-3xl sm:text-4xl font-bold text-[var(--primary-blue)] border-b-2 border-[var(--border-color)] pb-3 mb-6">6. Integritas Logo</h1>
                     <p class="text-[var(--text-muted)] mb-8">Untuk menjaga konsistensi dan nilai jenama, hindari modifikasi logo berikut ini:</p>
